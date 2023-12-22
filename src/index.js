@@ -107,7 +107,6 @@ let updateContractBalance = async () => {
         <h4>Balance real: {contractBalance} wei</h4>
         <h4>Balance wei: {currentBalanceWei} wei</h4>
         <h4>Wallet del usuario: {userBalance} wei</h4>
-        <button onClick={() => withdrawBalance()}>Withdraw Balance</button>
         <button onClick={() => updateContractBalance()}>Obtener Balance</button>
         <h4>Traspaso de admin</h4>
           <form className="form-inline" onSubmit={ (e) => submitMyForm(e)}>
@@ -123,6 +122,7 @@ let updateContractBalance = async () => {
           value={bnbAmount}
           onChange={(e) => setBnbAmount(e.target.value)}
         />
+                  <button onClick={() => withdrawBalance()}>Withdraw Balance</button>
         <ul>
             { tikets.map( (address, i) =>
                 <li>Tiket { i } comprado por { address }
